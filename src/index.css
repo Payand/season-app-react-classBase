@@ -1,13 +1,70 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.main-page h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: orangered;
+  font-size: 3rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.icon-left {
+  position: absolute;
+  top: 0.5em;
+  left: 0.3em;
+}
+
+.icon-right {
+  position: absolute;
+  bottom: 1.4em;
+  right: 1em;
+}
+
+.season-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.season-display.winter i {
+  color: aliceblue;
+  animation-name: snowflake;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes snowflake {
+  100% {
+    rotate: 360deg;
+  }
+}
+
+.season-display.summer i {
+  color: rgb(179, 255, 0);
+}
+
+.season-display.summer i {
+  animation-name: sunny;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes sunny {
+  100% {
+    rotate: 360deg;
+  }
+}
+
+.winter {
+  background-image: url("../public/images/winter.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.summer {
+  background-image: url("../public/images/Summer.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
